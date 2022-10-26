@@ -7,7 +7,7 @@ using namespace physics;
 
 int main(int argc, char **argv)
 {
-    quantity::electric_current test1{99.0};
+    auto test1 = 99.9_lx;
 
     std::cout << typeid(test1).name() << '\n';
     std::cout << test1.value << '\n';

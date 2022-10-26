@@ -44,8 +44,8 @@ namespace physics::quantity
 
     typedef details::_quantity_base<decltype(unit::coulomb)> electric_charge;
 
-    typedef details::_quantity_base<decltype(unit::volt)> electric_potential;
     typedef details::_quantity_base<decltype(unit::volt)> voltage;
+    typedef details::_quantity_base<decltype(unit::volt)> electric_potential;
     typedef details::_quantity_base<decltype(unit::volt)> emf;
 
     typedef details::_quantity_base<decltype(unit::farad)> capacitance;
@@ -68,7 +68,7 @@ namespace physics::quantity
 
     typedef details::_quantity_base<decltype(unit::gray)> absorbed_dose;
 
-    typedef details::_quantity_base<decltype(unit::sievert)> equivaleent_dose;
+    typedef details::_quantity_base<decltype(unit::sievert)> equivalent_dose;
 
     typedef details::_quantity_base<decltype(unit::katal)> catalytic_activity;
 

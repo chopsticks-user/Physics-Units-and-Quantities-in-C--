@@ -25,6 +25,13 @@ namespace physics::unit
             using power = _dim_space<time * p, length * p, mass * p, e_current * p,
                                      th_temp * p, a_substance * p, l_intensity * p>;
 
+            // template <int p = 1>
+            // constexpr auto power() const noexcept
+            // {
+            //     return _dim_space<time * p, length * p, mass * p, e_current * p,
+            //                       th_temp * p, a_substance * p, l_intensity * p>{};
+            // }
+
             constexpr _dim_space operator+(_dim_space rhs_dim_space) const noexcept
             {
                 return _dim_space{};

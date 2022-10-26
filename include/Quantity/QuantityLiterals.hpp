@@ -22,9 +22,9 @@ physics::quantity::mass operator"" _kg(long double val)
     return physics::quantity::mass{val};
 }
 
-physics::quantity::e_current operator"" _A(long double val)
+physics::quantity::electric_current operator"" _A(long double val)
 {
-    return physics::quantity::e_current{val};
+    return physics::quantity::electric_current{val};
 }
 
 physics::quantity::temperature operator"" _K(long double val)
@@ -32,14 +32,14 @@ physics::quantity::temperature operator"" _K(long double val)
     return physics::quantity::temperature{val};
 }
 
-physics::quantity::a_substance operator"" _mol(long double val)
+physics::quantity::amount_of_substance operator"" _mol(long double val)
 {
-    return physics::quantity::a_substance{val};
+    return physics::quantity::amount_of_substance{val};
 }
 
-physics::quantity::l_intensity operator"" _cd(long double val)
+physics::quantity::luminous_intensity operator"" _cd(long double val)
 {
-    return physics::quantity::l_intensity{val};
+    return physics::quantity::luminous_intensity{val};
 }
 
 // User-defined literals for derived quantities

@@ -42,7 +42,7 @@ physics::quantity::luminous_intensity operator"" _cd(long double val)
     return physics::quantity::luminous_intensity{val};
 }
 
-// User-defined literals for derived quantities
+// User-defined literals for quantities with a derived unit
 
 physics::quantity::angle operator"" _rad(long double val)
 {
@@ -143,5 +143,28 @@ physics::quantity::illuminance operator"" _lx(long double val)
 {
     return physics::quantity::illuminance{val};
 }
+
+// User-defined literals for quantities with a coherent derived unit
+
+physics::quantity::area operator"" _m2(long double val)
+{
+    return physics::quantity::area{val};
+}
+
+physics::quantity::volume operator"" _m3(long double val)
+{
+    return physics::quantity::volume{val};
+}
+
+physics::quantity::velocity operator"" _mps(long double val)
+{
+    return physics::quantity::velocity{val};
+}
+
+physics::quantity::acceleraton operator"" _mps2(long double val)
+{
+    return physics::quantity::acceleraton{val};
+}
+
 #endif // ENABLE_PHYSICS_UDLS
 #endif // PHYSICS_QUANTITY_LITERALS_HPP

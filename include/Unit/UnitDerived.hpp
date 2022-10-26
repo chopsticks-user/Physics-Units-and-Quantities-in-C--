@@ -6,8 +6,8 @@
 
 namespace physics::unit
 {
+    // derived units
     constexpr auto radian = none; // 1
-    constexpr auto degree = none; // 1
     constexpr auto steradian = none; // 1
     constexpr auto hertz = second<-1>; // 2
     constexpr auto newton = second<-2> * meter<1> * kilogram<1>;
@@ -29,6 +29,12 @@ namespace physics::unit
     constexpr auto katal = second<-1> * mole<1>;
     constexpr auto lumen = candela<1>; // 4 (steradian)
     constexpr auto lux = meter<-2> * candela<1>; // 4 (steradian)
+
+    // coherent derived units
+    constexpr auto square_meter = meter<2>;
+    constexpr auto cubic_meter = meter<3>;
+    constexpr auto meter_per_second = meter<1> / second<1>;
+    constexpr auto meter_per_second_squared = meter<1> / second<2>;
 
 } // namespace physics::unit
 

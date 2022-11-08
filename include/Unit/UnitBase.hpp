@@ -6,13 +6,31 @@
 
 namespace physics::unit
 {
-    // template <int time = 0, int length = 0, int mass = 0, int e_current = 0,
-    //           int th_temp = 0, int a_substance = 0, int l_intensity = 0>
-    // constexpr details::_dim_space<time, length, mass, e_current,
-    //                               th_temp, a_substance, l_intensity>
-    //     unit_space{};
+#if __cplusplus >= 201703L
+    inline static constexpr details::_dim_space<0> none{};
 
-    constexpr details::_dim_space<0> none{};
+    template <int power = 1>
+    inline constexpr details::_dim_space<power> second{};
+
+    template <int power = 1>
+    inline constexpr details::_dim_space<0, power> meter{};
+
+    template <int power = 1>
+    inline constexpr details::_dim_space<0, 0, power> kilogram{};
+
+    template <int power = 1>
+    inline constexpr details::_dim_space<0, 0, 0, power> ampere{};
+
+    template <int power = 1>
+    inline constexpr details::_dim_space<0, 0, 0, 0, power> kelvin{};
+
+    template <int power = 1>
+    inline constexpr details::_dim_space<0, 0, 0, 0, 0, power> mole{};
+
+    template <int power = 1>
+    inline constexpr details::_dim_space<0, 0, 0, 0, 0, 0, power> candela{};
+#else // C++14
+    static constexpr details::_dim_space<0> none{};
 
     template <int power = 1>
     constexpr details::_dim_space<power> second{};
@@ -34,6 +52,7 @@ namespace physics::unit
 
     template <int power = 1>
     constexpr details::_dim_space<0, 0, 0, 0, 0, 0, power> candela{};
+#endif // C++17
 
 } // namespace physics::unit
 

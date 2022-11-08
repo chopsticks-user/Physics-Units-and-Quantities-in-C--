@@ -7,7 +7,6 @@
 #include "DimSpace.hpp"
 #include "UnitBase.hpp"
 #include "UnitDerived.hpp"
-#include "UnitLiterals.hpp"
 #endif // c++14
 
 #endif // PHYSICS_UNIT_HPP

@@ -91,8 +91,9 @@ namespace utility
         return std::is_rvalue_reference<T &&>{};
     };
 
+    // c++11
     template <typename T>
-    std::string demangled_type_name()
+    std::string demangled_typename(T var = T{})
     {
         int status;
         std::string name = typeid(T).name();
